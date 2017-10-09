@@ -24,8 +24,7 @@ int MyString::GetLength()
 
 MyString MyString::ToUpper()
 {
-	
-	char *Upper = new char[255];                   //Copy 
+	char *Upper = new char[255];                   
 	for (int i = 0; i <= GetLength(); i++)        
 	{
 		if (mString[i] >= 97 && mString[i] <= 122) // checks to see if the character isnt in the desired case.
@@ -38,7 +37,7 @@ MyString MyString::ToUpper()
 
 MyString MyString::ToLower()
 {
-	char *Lower = new char[255];                  //Copy array
+	char *Lower = new char[255];                  
 	for (int i = 0; i <= GetLength(); i += 1)      
 	{
 		if (mString[i] >= 65 && mString[i] <= 90) // checks to see if the character isnt in the desired case.
@@ -63,6 +62,37 @@ bool MyString::CompareStrings(MyString &other) //compares values in two instance
 		}
 	}
 	return true;  
+}
+
+MyString MyString::FindSubString(const char subString,int index = 0)
+{
+	for (int i = 0; i <= GetLength(); i++)
+	{
+		int iter = 1;
+		for (int j = 0; j <= GetLength(); i++)
+		{
+			int iter = 1;
+		}
+	}
+	return MyString();
+}
+
+MyString MyString::ReplaceSubString()
+{
+
+	return MyString();
+}
+
+char MyString::AppendStrings()
+{
+
+	return 0;
+}
+
+char MyString::PrependStrings()
+{
+
+	return 0;
 }
 
 
