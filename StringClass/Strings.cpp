@@ -64,27 +64,38 @@ bool MyString::CompareStrings(MyString &other) //compares values in two instance
 	return true;  
 }
 
-MyString MyString::FindSubString(const char subString,int index = 0)
+bool MyString::FindSubString(MyString subString,int index = 0)
 {
-	for (int i = 0; i <= GetLength(); i++)
-	{
-		int iter = 1;
-		for (int j = 0; j <= GetLength(); i++)
+	for (int i = 0; i < GetLength(); i++)
+	{		
+		if (mString[i] == subString.mString[0])
 		{
-			int iter = 1;
+			int iter = i;
+			for (int j = 0; j < subString.GetLength(); j++)
+			{
+				iter++;
+			}				
 		}
 	}
-	return MyString();
+	return false;
 }
 
 MyString MyString::ReplaceSubString()
 {
+	char *replace = new char[255];
 
 	return MyString();
 }
 
 char MyString::AppendStrings()
 {
+	for (int i = 0; i < GetLength(); i++)
+	{
+		if (mString[i] >= GetLength())
+		{
+
+		}
+	}
 
 	return 0;
 }
@@ -94,6 +105,3 @@ char MyString::PrependStrings()
 
 	return 0;
 }
-
-
-
