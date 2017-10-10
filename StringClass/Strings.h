@@ -13,6 +13,8 @@ public:
 	bool CompareStrings(MyString &other);                       //Compares the strings together
 	bool FindSubString(MyString subString, int index = 0);      //
 	MyString ReplaceSubString();    //
-	char AppendStrings();           //
-	char PrependStrings();          //
+	MyString AppendStrings(MyString aString);           //
+	MyString PrependStrings(MyString aString);          //
+	int GetIndex(int *place);
+	int GetInput(int *input);
 };

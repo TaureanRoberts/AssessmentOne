@@ -64,7 +64,7 @@ bool MyString::CompareStrings(MyString &other) //compares values in two instance
 	return true;  
 }
 
-bool MyString::FindSubString(MyString subString,int index = 0)
+bool MyString::FindSubString(MyString subString,int index)
 {
 	for (int i = 0; i < GetLength(); i++)
 	{		
@@ -83,25 +83,57 @@ bool MyString::FindSubString(MyString subString,int index = 0)
 MyString MyString::ReplaceSubString()
 {
 	char *replace = new char[255];
-
 	return MyString();
 }
 
-char MyString::AppendStrings()
+MyString MyString::AppendStrings(MyString aString)
 {
+	char *append = new char[255];
 	for (int i = 0; i < GetLength(); i++)
 	{
-		if (mString[i] >= GetLength())
-		{
+		append[i] = mString[i];
+	}
+	int iter = GetLength();
+	for (int j = 0; j < aString.GetLength(); j++)
+	{		
+		append[iter++] = aString.mString[j];
+	}
+	append[iter] = '\0';
+	return MyString(append);
+}
 
-		}
+MyString MyString::PrependStrings(MyString aString)
+{
+	char *prepend = new char[255];
+	int iter = GetLength();
+	for (int i = 0; i < aString.GetLength(); i++)
+	{
+		prepend[iter++] = aString.mString[i];
+	}
+	for (int j = 0; j < GetLength(); j++)
+	{
+		prepend[j] = mString[j];
+	}
+	prepend[iter] = '\0';
+	return MyString(prepend);
+}
+
+int MyString::GetIndex(int *place)
+{
+	char *mIndex = new char[255];
+
+	for (int i = 0; i < GetLength(); i++)
+	{
+		 
 	}
 
 	return 0;
 }
 
-char MyString::PrependStrings()
+int MyString::GetInput(int *input)
 {
+
 
 	return 0;
 }
+

@@ -4,10 +4,13 @@
 int main()
 {
 	MyString testOne = "Johnny";
-	MyString testTwo = "Johnny";
+	MyString testTwo = "Bravo";
 	MyString testThree = "Johnnyy";
 
-	bool result = testOne.CompareStrings(testThree);
+	//bool result = testOne.CompareStrings(testTwo);
+	//testOne.AppendStrings(testTwo);
+	testOne.PrependStrings(testTwo);
+
 
 	system("pause");
 }
