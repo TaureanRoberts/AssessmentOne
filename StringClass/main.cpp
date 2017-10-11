@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 #include "Strings.h"
 
 int main()
@@ -11,7 +12,7 @@ int main()
 	//testOne.AppendStrings(testTwo);
 	//testOne.PrependStrings(testTwo);
 	//char a = testOne.GetIndex(2);
-	
 	int b = testOne.GetInput();
+
 	system("pause");
 }
