@@ -16,5 +16,5 @@ public:
 	MyString AppendStrings(MyString aString);           //
 	MyString PrependStrings(MyString aString);          //
 	char GetIndex(int place);
-	int GetInput(int &input , MyString &name);
+	int GetInput(int input);
 };
