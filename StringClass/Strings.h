@@ -15,6 +15,6 @@ public:
 	MyString ReplaceSubString();    //
 	MyString AppendStrings(MyString aString);           //
 	MyString PrependStrings(MyString aString);          //
-	int GetIndex(int *place);
-	int GetInput(int *input);
+	char GetIndex(int place);
+	int GetInput(int &input , MyString &name);
 };

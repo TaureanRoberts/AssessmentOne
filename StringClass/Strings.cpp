@@ -118,22 +118,14 @@ MyString MyString::PrependStrings(MyString aString)
 	return MyString(prepend);
 }
 
-int MyString::GetIndex(int *place)
+char MyString::GetIndex(int place)
 {
-	char *mIndex = new char[255];
-
-	for (int i = 0; i < GetLength(); i++)
-	{
-		 
-	}
-
-	return 0;
+	return mString[place];
 }
 
-int MyString::GetInput(int *input)
+int MyString::GetInput(int input)
 {
+	
 
-
-	return 0;
+	return  mString[input];
 }
-
