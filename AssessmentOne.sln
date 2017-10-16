@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AssessmentOne", "StringClass\AssessmentOne.vcxproj", "{45B91443-4B17-4504-952F-E3301F2B8DC3}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WumpusWorld", "WumpusWorld\WumpusWorld.vcxproj", "{9C1E948F-4E68-4113-9E22-0D4E9A8FB402}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{45B91443-4B17-4504-952F-E3301F2B8DC3}.Release|x64.Build.0 = Release|x64
 		{45B91443-4B17-4504-952F-E3301F2B8DC3}.Release|x86.ActiveCfg = Release|Win32
 		{45B91443-4B17-4504-952F-E3301F2B8DC3}.Release|x86.Build.0 = Release|Win32
+		{9C1E948F-4E68-4113-9E22-0D4E9A8FB402}.Debug|x64.ActiveCfg = Debug|x64
+		{9C1E948F-4E68-4113-9E22-0D4E9A8FB402}.Debug|x64.Build.0 = Debug|x64
+		{9C1E948F-4E68-4113-9E22-0D4E9A8FB402}.Debug|x86.ActiveCfg = Debug|Win32
+		{9C1E948F-4E68-4113-9E22-0D4E9A8FB402}.Debug|x86.Build.0 = Debug|Win32
+		{9C1E948F-4E68-4113-9E22-0D4E9A8FB402}.Release|x64.ActiveCfg = Release|x64
+		{9C1E948F-4E68-4113-9E22-0D4E9A8FB402}.Release|x64.Build.0 = Release|x64
+		{9C1E948F-4E68-4113-9E22-0D4E9A8FB402}.Release|x86.ActiveCfg = Release|Win32
+		{9C1E948F-4E68-4113-9E22-0D4E9A8FB402}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

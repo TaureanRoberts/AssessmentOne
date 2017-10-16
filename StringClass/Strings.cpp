@@ -26,28 +26,36 @@ int MyString::GetLength()
 
 MyString MyString::ToUpper()
 {
-	char *Upper = new char[255];                   
+	char *Upper = new char[255];
+	int iter = GetLength();
 	for (int i = 0; i <= GetLength(); i++)        
 	{
 		if (mString[i] >= 97 && mString[i] <= 122) // checks to see if the character isnt in the desired case.
 		{
 			Upper[i] = mString[i] - 32;
 		}
+		else
+			Upper[i] = mString[i];
 	}
-	return  MyString();
+	Upper[iter] = '\0';
+	return MyString(Upper);
 }
 
 MyString MyString::ToLower()
 {
-	char *Lower = new char[255];                  
+	char *Lower = new char[255];
+	int iter = GetLength();
 	for (int i = 0; i <= GetLength(); i += 1)      
 	{
 		if (mString[i] >= 65 && mString[i] <= 90) // checks to see if the character isnt in the desired case.
 		{
 			Lower[i] = mString[i] + 32;
 		}
+		else
+			Lower[i] = mString[i];
 	}
-	return MyString();
+	Lower[iter] = '\0';
+	return MyString(Lower);
 }
 
 bool MyString::CompareStrings(MyString &other) //compares values in two instances of the string
@@ -66,18 +74,24 @@ bool MyString::CompareStrings(MyString &other) //compares values in two instance
 	return true;  
 }
 
-bool MyString::FindSubString(MyString subString,int index)
+bool MyString::FindSubString(MyString subString, int index)
 {
-	for (int i = 0; i < GetLength(); i++)
+	if (GetLength() < subString.GetLength())
+		return false;
+	for (int i = index; i < GetLength(); i++)
 	{		
 		if (mString[i] == subString.mString[0])
 		{
 			int iter = i;
 			for (int j = 0; j < subString.GetLength(); j++)
 			{
+				if (mString[iter] != subString.mString[j])
+					break;
+				if (j == subString.GetLength() - 1 && mString[iter] == subString.mString[j])
+					return true;
 				iter++;
-			}				
-		}
+			}			
+		}		
 	}
 	return false;
 }
@@ -85,18 +99,18 @@ bool MyString::FindSubString(MyString subString,int index)
 MyString MyString::ReplaceSubString()
 {
 	char *replace = new char[255];
-	// Bonus question, difficult.
+	// Bonus question, hard.
 	return MyString();
 }
 
 MyString MyString::AppendStrings(MyString aString)
 {
 	char *append = new char[255];
+    int iter = GetLength();
 	for (int i = 0; i < GetLength(); i++)
 	{
 		append[i] = mString[i];
 	}
-	int iter = GetLength();
 	for (int j = 0; j < aString.GetLength(); j++)
 	{		
 		append[iter++] = aString.mString[j];
@@ -107,18 +121,18 @@ MyString MyString::AppendStrings(MyString aString)
 
 MyString MyString::PrependStrings(MyString aString)
 {
-	char *prepend = new char[255];
-	int iter = GetLength();
+	char *append = new char[255];
+	int iter = aString.GetLength();
 	for (int i = 0; i < aString.GetLength(); i++)
 	{
-		prepend[iter++] = aString.mString[i];
+		append[i] = aString.mString[i];
 	}
 	for (int j = 0; j < GetLength(); j++)
 	{
-		prepend[j] = mString[j];
+		append[iter++] = mString[j];
 	}
-	prepend[iter] = '\0';
-	return MyString(prepend);
+	append[iter] = '\0';
+	return MyString(append);
 }
 
 char MyString::GetIndex(int place)
@@ -126,13 +140,8 @@ char MyString::GetIndex(int place)
 	return mString[place];
 }
 
-int MyString::GetInput(int input)
-{
-	return  mString[input];
-}
-
 istream &operator >> (istream &input, MyString &other)
-{
+{ //Gets user input for the string.
 	char *results = new char[255];
 	input >> results;
 	other.mString = results;

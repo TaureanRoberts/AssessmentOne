@@ -1,24 +1,20 @@
 #include <iostream>
-#include <string>
 #include "Strings.h"
+#include <assert.h>
+#include <string>
 
 using namespace std;
 
 int main()
 {
-	MyString testOne = "Johnny";
-	cin >> testOne;
-	MyString testTwo = "Bravo";
-	cin >> testTwo;
-	MyString testThree = "Dexter";
-	cin >> testThree;
+	MyString *test1 = new MyString("Baseball");
+	assert(test1->GetLength() == 8); 
+	assert(test1->ToUpper().CompareStrings(MyString("BASEBALL")) == true);
+	assert(test1->ToLower().CompareStrings(MyString("baseball")) == true);
+	assert(test1->PrependStrings("Bat").CompareStrings(MyString("BatBaseball")) == true);
+	assert(test1->AppendStrings("Cat").CompareStrings(MyString("BaseballCat")) == true);
+	assert(test1->GetIndex().FindSubString(MyString("Baseball")) == true);
 
-	//bool result = testOne.CompareStrings(testTwo);
-	//testOne.AppendStrings(testTwo);
-	//testOne.PrependStrings(testTwo);
-	//char a = testOne.GetIndex(2);
-	//int b = testOne.GetInput(2);
-	istream &operator >> (istream &testOne, MyString &testThree);
 
 	system("pause");
 }
