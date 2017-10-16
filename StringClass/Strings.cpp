@@ -2,7 +2,7 @@
 #include <string>
 #include "Strings.h"
 
-using namespace std;
+ using namespace std;
 
 MyString::MyString()
 {
@@ -85,6 +85,7 @@ bool MyString::FindSubString(MyString subString,int index)
 MyString MyString::ReplaceSubString()
 {
 	char *replace = new char[255];
+	// Bonus question, difficult.
 	return MyString();
 }
 
@@ -125,14 +126,15 @@ char MyString::GetIndex(int place)
 	return mString[place];
 }
 
+int MyString::GetInput(int input)
+{
+	return  mString[input];
+}
+
 istream &operator >> (istream &input, MyString &other)
 {
 	char *results = new char[255];
 	input >> results;
-	other.GetInput = results;
+	other.mString = results;
 	return input;
-}
-int MyString::GetInput(int input)
-{
-	return  mString[input];
 }

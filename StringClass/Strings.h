@@ -1,5 +1,7 @@
 #pragma once
 
+using namespace std;
+
 class MyString
 {
 private:
@@ -17,4 +19,5 @@ public:
 	MyString PrependStrings(MyString aString);          //
 	char GetIndex(int place);
 	int GetInput(int input);
+	friend istream &operator >> (istream &input, MyString &other);
 };
