@@ -2,6 +2,8 @@
 #include <string>
 #include "Strings.h"
 
+using namespace std;
+
 MyString::MyString()
 {
 	mString = new char[255];
@@ -123,9 +125,14 @@ char MyString::GetIndex(int place)
 	return mString[place];
 }
 
+istream &operator >> (istream &input, MyString &other)
+{
+	char *results = new char[255];
+	input >> results;
+	other.GetInput = results;
+	return input;
+}
 int MyString::GetInput(int input)
 {
-	
-
 	return  mString[input];
 }
