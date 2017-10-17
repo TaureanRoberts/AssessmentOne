@@ -1,5 +1,5 @@
 #pragma once
-using namespace std;
+
 class Point2D
 {
 private:
@@ -7,9 +7,11 @@ private:
 	float mY;
 public:
 	Point2D();
-	Point2D(float x, float y);
-	float GetX();
-	float GetY();
-	void PrintPoint();
-	friend istream &operator >> (istream &input, Point2D &other);
+	Point2D(float y, float x);
+	int getGrid();
+	float FindX();
+	float FindY();
+	void showPoint();
+	
+
 };

@@ -13,4 +13,5 @@ public:
 	void MovePlayer(char *place);
 	void SetPosition(Point2D *newPos);
 
+
 };
