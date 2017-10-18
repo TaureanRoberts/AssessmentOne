@@ -5,13 +5,11 @@ class Player
 {
 private:
 	char* mName;
-	Point2D* mPos;
-	int mHealth;
+	Point2D* mPosition;
 public:
 	Player();
-	Player(char name);
+	Player(char *name);
 	void MovePlayer(char *place);
-	void SetPosition(Point2D *newPos);
-
-
+	void SetPosition(Point2D mPos);
+	bool WumpusAppears();
 };

@@ -19,7 +19,7 @@ int MyString::GetLength()
 	int i=0;                     //Gives "i" definition and a value to be passed in
  	while (mString[i] != '\0')     //Checks if the array in place of "i" in the array it checks to see is it the null char.
 	{
-		i+=1;	                   //Counts the place of "i" of an array by one time along the array until the '\0'.
+		i++;	                   //Counts the place of "i" of an array by one time along the array until the '\0'.
 	}
 	return i;                      //Returns the places that was moved to up to the '\0' was reached.
 }
