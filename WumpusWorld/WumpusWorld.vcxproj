@@ -111,12 +111,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="dungeon.cpp" />
+    <ClCompile Include="Lair.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="Point2D.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Dungeon.h" />
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="Lair.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="Point2D.h" />
   </ItemGroup>

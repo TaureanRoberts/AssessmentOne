@@ -17,6 +17,4 @@ public:
 	float GetX();
 	float GetY();
 	void showPoint();
-	
-	
 };

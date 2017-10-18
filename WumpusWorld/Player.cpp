@@ -21,7 +21,6 @@ Player::Player(char *name)
 
 void Player::MovePlayer(char * place)
 {
-	
 	int direction;
 	cout << "Enter one of the W.A.S.D. keys to move in the dungeon:\n";
 	cout << "\n";

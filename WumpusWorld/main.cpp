@@ -2,9 +2,10 @@
 #include "Player.h"
 #include "Dungeon.h"
 #include "Point2D.h"
+#include "Game.h"
 
 int main()
 {
-	Game();
+	myGame();
 	system("pause");
 }

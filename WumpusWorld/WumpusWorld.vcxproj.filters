@@ -27,6 +27,9 @@
     <ClCompile Include="dungeon.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Lair.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Point2D.h">
@@ -36,6 +39,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Dungeon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Lair.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

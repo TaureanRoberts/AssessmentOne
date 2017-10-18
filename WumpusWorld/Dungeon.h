@@ -9,10 +9,10 @@ private:
 	Player *mPlayer;
 	int mCols;
 	int mRows;
-	void genRooms();
 public:
 	Dungeon();
 	~Dungeon();
 	Dungeon(Player *player, int rows, int cols);
 	bool CheckPlayerPosition();
+	void genRooms();
 };
