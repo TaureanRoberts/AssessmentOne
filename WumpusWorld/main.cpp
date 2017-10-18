@@ -5,7 +5,6 @@
 
 int main()
 {
-	
-
+	Game();
 	system("pause");
 }

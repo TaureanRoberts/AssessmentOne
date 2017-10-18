@@ -7,6 +7,10 @@ Point2D::Point2D()
 	mY = 0;
 }
 
+Point2D::~Point2D()
+{
+}
+
 Point2D::Point2D(float y, float x)
 {
 	mX = x;
@@ -29,21 +33,16 @@ Point2D Point2D::operator-(const Point2D & other)
 	return subPoint;
 }
 
-Point2D Point2D::operator*(const Point2D & other)
+bool Point2D::operator==(const Point2D &other)
 {
-	Point2D multiPoint;
-	multiPoint.mX = mX * other.mX;
-	multiPoint.mY = mY * other.mY;
-	return multiPoint;
+	return (mX == mX && mY == mY) ? true : false;
 }
 
-Point2D Point2D::operator*(float other)
+bool Point2D::operator!=(const Point2D & other)
 {
-	Point2D pointScale;
-	pointScale.mX * (mX, mY);
-	pointScale.mY * (mX, mY);
-	return pointScale;
+	return false;
 }
+
 
 float Point2D::GetX()
 {
@@ -58,12 +57,5 @@ float Point2D::GetY()
 
 void Point2D::showPoint()
 {
-	Point2D showPlace;
-	std::cout << mGrid << showPlace.mX << std::endl;
-	std::cout << mGrid << showPlace.mY << std::endl;
-}
-
-bool Point2D::operator==(const Point2D &other)
-{
-	return (mX == mX && mY == mY) ? true : false;
+	std::cout << "<" << mX << "," << ">\n";
 }

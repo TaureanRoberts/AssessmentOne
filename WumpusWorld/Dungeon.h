@@ -12,7 +12,7 @@ private:
 	void genRooms();
 public:
 	Dungeon();
+	~Dungeon();
 	Dungeon(Player *player, int rows, int cols);
 	bool CheckPlayerPosition();
-	void PrintRooms();
 };
