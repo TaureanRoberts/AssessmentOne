@@ -3,12 +3,14 @@
 class Grid2D
 {
 private:
-	char PlaySpace[3][3] = { {'7','8','9'},{'4','5','6'}, {'1','2','3'} };
+	char PlaySpace[3][3] = {{'7','8','9'},{'4','5','6'}, {'1','2','3'}};
+	bool isInputBad = true;
 public:
-	void ShowGrid();
-	void MovePlayer(char player);
-	void OriginPlayer(char player);
+    bool isDone = false;
+	void DrawGrid();
+	void PlayerInput();
+	bool PlayerPlacement(int x, int y, char currentPlayer);
 	bool MoveRules();
-	bool DidWin();
-	bool DidWeTie();
+	bool WinCondition(char currentPlayer);
+	void turnChecking();
 };

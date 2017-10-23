@@ -3,9 +3,8 @@
 
 using namespace std;
 
-void Grid2D::ShowGrid()
+void Grid2D::DrawGrid()
 {
-	cout << "Tic Tac Toe Anyone? \n";
 	for (int i = 0; i < 3; i++)
 	{
 		for (int j = 0; j < 3; j++)
@@ -16,54 +15,86 @@ void Grid2D::ShowGrid()
 	}
 }
 
-void Grid2D::MovePlayer(char player)
+void Grid2D::PlayerInput()
 {
-	int i;
-	cout << "Use the numberpad to place your marker. \n";
-	for (int i = 0; i < 9; i++)
+	char i;
+	while (isInputBad == true)
 	{
-		if (i == 7)
-			PlaySpace[0][0] = player;
-		else if (i == 8)
-			PlaySpace[0][1] = player;
-		else if (i == 9)
-			PlaySpace[0][2] = player;
-		else if (i == 4)
-			PlaySpace[1][0] = player;
-		else if (i == 5)
-			PlaySpace[1][1] = player;
-		else if (i == 6)
-			PlaySpace[1][2] = player;
-		else if (i == 1)
-			PlaySpace[2][0] = player;
-		else if (i == 2)
-			PlaySpace[2][1] = player;
-		else if (i == 3)
-			PlaySpace[2][2] = player;
+		cout << "Use the numberpad to place your marker. \n";
+		cin >> i;
+		if (i < 1 || i > 9)
+		{
+			cout << "Not an aplicable choice." << endl;
+		}
 		else
-			std::cout << "Not an aplicable choice." << std::endl;
+			isInputBad = false;
 	}
 }
 
-void Grid2D::OriginPlayer(char player)
+bool Grid2D::PlayerPlacement(int x, int y, char currentPlayer)
 {
-	if (player == 'X')
-		player = 'O';
-	else
-		player = 'X';
+	if (PlaySpace[x][y] != '7','8','9','4','5','6','1','2','3')
+	{
+		return false;
+	}
+	PlaySpace[x][y] = currentPlayer;
+	return true;
 }
 
 bool Grid2D::MoveRules()
 {
+	bool x = PlayerPlacement;
+	int y =  
+    isDone;
+	int turn = 0;
+	while (isDone == false)
+	{
+		DrawGrid();
+		PlayerInput();
+		if (PlayerPlacement() == false)
+		{
+
+		}
+		
+	}
 	return false;
 }
 
-bool Grid2D::DidWin()
+
+bool Grid2D::WinCondition(char currentPlayer)
 {
+    for (int i = 0; i < 3; i++) 
+	{ 
+		if ((PlaySpace[i][0] == currentPlayer) && (PlaySpace[i][0] == PlaySpace[i][1]) && (PlaySpace[i][1] == PlaySpace[i][2])) 
+		{
+			return true;
+		}
+	}
+	for (int i = 0; i < 3; i++)
+	{
+		if ((PlaySpace[0][i] == currentPlayer) && (PlaySpace[0][i] == PlaySpace[1][i]) && (PlaySpace[1][i] == PlaySpace[2][i])) 
+		{
+			return true; 
+		}
+	}
+	if ((PlaySpace[0][0] == currentPlayer) && (PlaySpace[0][0] == PlaySpace[1][1]) && (PlaySpace[1][1] == PlaySpace[2][2])) 
+	{
+		return true; 
+	}
+	if ((PlaySpace[2][0] == currentPlayer) && (PlaySpace[2][0] == PlaySpace[1][1]) && (PlaySpace[1][1] == PlaySpace[0][2])) 
+	{
+		return true; 
+	}
 	return false;
 }
 
-bool Grid2D::DidWeTie()
+void Grid2D::turnChecking()
 {
-	return false;
+	char playerOne = 'X';
+	char playerTwo = 'O';
+	char playerTurn = playerOne;
+	if (playerTurn == playerOne)
+		playerTurn = playerTwo;
+	else
+		playerOne = playerOne;
 }
