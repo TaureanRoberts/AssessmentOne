@@ -8,12 +8,11 @@ int main()
 	cout << "Tic Tac Toe Anyone? \n";
 	while (game.WinCondition() == false)
 	{
-	game.DisplayGrid();
+    game.DisplayGrid();
 	game.DrawGrid();
 	game.PlayPiece();
 	game.ClearGrid();
-    }
-
+	}
 
 	system("pause");
 }

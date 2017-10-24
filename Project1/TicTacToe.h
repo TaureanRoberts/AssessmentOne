@@ -4,11 +4,10 @@ class MyGrid
 {
 private:
 	char Grid2D[3][3] = {{'7','8','9'},{'4','5','6'}, {'1','2','3'}};
-	char mPlayer = 'X';
-	char mPlayer2 = 'O';
+	char mPlayer;
 public:
 	void DisplayGrid();
-	void PlayPiece();
+	bool PlayPiece();
 	void DrawGrid();
 	void ClearGrid();
 	bool WinCondition();
