@@ -1,17 +1,18 @@
 #include <iostream>
-#include "grid.h"
+#include "TicTacToe.h"
 using namespace std;
+
 int main()
 {
+	MyGrid game;
 	cout << "Tic Tac Toe Anyone? \n";
-	bool isDone = false;
-	Grid2D game;
-	while (isDone == false)
+	while (game.WinCondition() == false)
 	{
-		game.DrawGrid();
-		game.MoveRules();
-
-	}
+	game.DisplayGrid();
+	game.DrawGrid();
+	game.PlayPiece();
+	game.ClearGrid();
+    }
 
 	system("pause");
 }
