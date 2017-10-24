@@ -12,6 +12,7 @@ void MyGrid::DisplayGrid()
 
 void MyGrid::PlayPiece()
 {
+	{
 	int x;
 	cout << "Choose a number from 1 to 9 to mark your place." << endl;
 	cin >> x;
@@ -35,11 +36,25 @@ void MyGrid::PlayPiece()
 		Grid2D[2][2] = mPlayer;
 	else
 		std::cout << "Cant choose this position." << std::endl;
+    }
+	for (int i = 0; i < 3; i++)
+	{
+		for (int j = 0; j < 3; j++)
+		{
+			if (Grid2D[i][j] == true)
+				cout << "Cant choose this location.\n";
+		}
+	}
 }
 
 void MyGrid::DrawGrid()
 {
-    
+	if (mPlayer == 'O')
+	{
+		mPlayer = 'X';
+	}
+	else
+		mPlayer = 'O';
 }
 
 void MyGrid::ClearGrid()

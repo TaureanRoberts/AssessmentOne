@@ -14,5 +14,6 @@ int main()
 	game.ClearGrid();
     }
 
+
 	system("pause");
 }
