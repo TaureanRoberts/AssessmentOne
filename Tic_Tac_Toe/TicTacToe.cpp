@@ -2,55 +2,54 @@
 #include <iostream>
 using namespace std;
 void MyGrid::DisplayGrid()
-{
+{   
+	cout << "                      " << endl;
 	cout << " " << Grid2D[0][0] << " | " << Grid2D[0][1] << " | " << Grid2D[0][2] << endl;
 	cout << "===========" << std::endl;
 	cout << " " << Grid2D[1][0] << " | " << Grid2D[1][1] << " | " << Grid2D[1][2] << endl;
 	cout << "===========" << std::endl;
 	cout << " " << Grid2D[2][0] << " | " << Grid2D[2][1] << " | " << Grid2D[2][2] << endl;
+	cout << "                      " << endl;
 }
 
 bool MyGrid::PlayPiece()
 {
-	char player1 = 'X';
-	char player2 = 'O';
-
 	int x;
 	cout << "Choose a number from 1 to 9 to mark your place." << endl;
 	cin >> x;
-	if (x == 7 && (Grid2D[0][0] != player1 || Grid2D[0][0] != player2))
+	if (x == 7 && (Grid2D[0][0] != 'X' || Grid2D[0][0] != 'O'))
 	{
 		Grid2D[0][0] = mPlayer;
 	}
-	else if (x == 8 && (Grid2D[0][1] != player1 || Grid2D[0][1] != player2))
+	else if (x == 8 && (Grid2D[0][1] != 'X' || Grid2D[0][1] != 'O'))
 	{
 		Grid2D[0][1] = mPlayer;
 	}
-	else if (x == 9 && (Grid2D[0][2] != player1 || Grid2D[0][2] != player2))
+	else if (x == 9 && (Grid2D[0][2] != 'X' || Grid2D[0][2] != '0'))
 	{
 		Grid2D[0][2] = mPlayer;
 	}
-	else if (x == 4 && (Grid2D[1][0] != player1 || Grid2D[1][0] != player2))
+	else if (x == 4 && (Grid2D[1][0] != 'X' || Grid2D[1][0] != 'O'))
 	{
 		Grid2D[1][0] = mPlayer;
 	}
-	else if (x == 5 && (Grid2D[1][1] != player1 || Grid2D[1][1] != player2))
+	else if (x == 5 && (Grid2D[1][1] !='X' || Grid2D[1][1] != 'O'))
 	{
 		Grid2D[1][1] = mPlayer;
 	}
-	else if (x == 6 && (Grid2D[1][2] != player1 || Grid2D[1][2] != player2))
+	else if (x == 6 && (Grid2D[1][2] != 'X' || Grid2D[1][2] != 'O'))
 	{
 		Grid2D[1][2] = mPlayer;
 	}
-	else if (x == 1 && (Grid2D[2][0] != player1 || Grid2D[2][0] != player2))
+	else if (x == 1 && (Grid2D[2][0] != 'X' || Grid2D[2][0] != 'O'))
 	{
 		Grid2D[2][0] = mPlayer;
 	}
-	else if (x == 2 && (Grid2D[2][1] != player1 || Grid2D[2][1] != player2))
+	else if (x == 2 && (Grid2D[2][1] != 'X'|| Grid2D[2][1] != 'O'))
 	{
 		Grid2D[2][1] = mPlayer;
 	}
-	else if (x == 3 && (Grid2D[2][2] != player1 || Grid2D[2][2] != player2))
+	else if (x == 3 && (Grid2D[2][2] != 'X' || Grid2D[2][2] != 'O'))
 	{
 		Grid2D[2][2] = mPlayer;
 	}
@@ -59,6 +58,20 @@ bool MyGrid::PlayPiece()
 		cout << "Cant choose this position." << endl;
 	}
 	return false;
+}
+
+void MyGrid::ClearGrid()
+{
+
+}
+
+void MyGrid::CheckSpace(int x, int o)
+{
+	int rule;
+	if ()
+	{
+		
+	}
 }
 
 void MyGrid::DrawGrid()

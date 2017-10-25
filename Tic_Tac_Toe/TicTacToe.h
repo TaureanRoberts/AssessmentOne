@@ -35,6 +35,22 @@ public:
 	//Postcondition: Covers the numbers with a "X" or a "O" to show placement.
 	//Protection Level:Public
 
+	void ClearGrid();
+	//Prototype: void ClearGrid();
+	//Description: 
+	//Arguments: N/A
+	//Precondition:
+	//PostCondition:
+	//Protection Level: Public
+
+	void CheckSpace(int x, int o);
+	//Prototype: void Playerinfo(char player1, char player2);
+	//Description: Displays info about the current player turn.
+	//Arguments: N/A
+	//Precondition:
+	//Postcondition:
+	//Protection Level: Public
+
 	void DrawGrid();
 	//Prototype: void DrawGrid();
 	//Description: Updates the grid with the pieces that were placed in the slots.
