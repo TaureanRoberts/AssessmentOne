@@ -18,5 +18,7 @@ int main()
 	assert(test1->GetIndex(2) == 's');
 	assert(test1->FindSubString("seba") == true);
 
+    istream &operator >> (istream &input, MyString &other);
+
 	system("pause");
 }
