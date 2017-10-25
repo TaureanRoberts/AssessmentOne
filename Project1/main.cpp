@@ -11,7 +11,6 @@ int main()
     game.DisplayGrid();
 	game.DrawGrid();
 	game.PlayPiece();
-	game.ClearGrid();
 	}
 
 	system("pause");

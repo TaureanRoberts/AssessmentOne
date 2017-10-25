@@ -20,7 +20,7 @@ bool MyGrid::PlayPiece()
 	cin >> x;
 	if (x == 7 && (Grid2D[0][0] != player1 || Grid2D[0][0] != player2))
 	{
-		Grid2D[0][0] == mPlayer;
+		Grid2D[0][0] = mPlayer;
 	}
 	else if (x == 8 && (Grid2D[0][1] != player1 || Grid2D[0][1] != player2))
 	{
@@ -69,11 +69,6 @@ void MyGrid::DrawGrid()
 	}
 	else
 		mPlayer = 'X';
-}
-
-void MyGrid::ClearGrid()
-{
-	
 }
 
 bool MyGrid::WinCondition()
