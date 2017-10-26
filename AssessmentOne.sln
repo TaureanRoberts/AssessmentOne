@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.8
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AssessmentOne", "StringClass\AssessmentOne.vcxproj", "{45B91443-4B17-4504-952F-E3301F2B8DC3}"
 EndProject
@@ -21,6 +21,7 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{45B91443-4B17-4504-952F-E3301F2B8DC3}.Debug|x64.ActiveCfg = Debug|x64
 		{45B91443-4B17-4504-952F-E3301F2B8DC3}.Debug|x64.Build.0 = Debug|x64
+		{45B91443-4B17-4504-952F-E3301F2B8DC3}.Debug|x64.Deploy.0 = Debug|x64
 		{45B91443-4B17-4504-952F-E3301F2B8DC3}.Debug|x86.ActiveCfg = Debug|Win32
 		{45B91443-4B17-4504-952F-E3301F2B8DC3}.Debug|x86.Build.0 = Debug|Win32
 		{45B91443-4B17-4504-952F-E3301F2B8DC3}.Release|x64.ActiveCfg = Release|x64
@@ -29,6 +30,7 @@ Global
 		{45B91443-4B17-4504-952F-E3301F2B8DC3}.Release|x86.Build.0 = Release|Win32
 		{9C1E948F-4E68-4113-9E22-0D4E9A8FB402}.Debug|x64.ActiveCfg = Debug|x64
 		{9C1E948F-4E68-4113-9E22-0D4E9A8FB402}.Debug|x64.Build.0 = Debug|x64
+		{9C1E948F-4E68-4113-9E22-0D4E9A8FB402}.Debug|x64.Deploy.0 = Debug|x64
 		{9C1E948F-4E68-4113-9E22-0D4E9A8FB402}.Debug|x86.ActiveCfg = Debug|Win32
 		{9C1E948F-4E68-4113-9E22-0D4E9A8FB402}.Debug|x86.Build.0 = Debug|Win32
 		{9C1E948F-4E68-4113-9E22-0D4E9A8FB402}.Release|x64.ActiveCfg = Release|x64
@@ -54,5 +56,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DD0E20D3-E68E-4290-8167-4812790C5EF3}
 	EndGlobalSection
 EndGlobal
