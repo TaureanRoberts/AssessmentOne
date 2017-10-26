@@ -1,6 +1,11 @@
 #include "TicTacToe.h"
 #include <iostream>
+#include <string>
+
 using namespace std;
+MyGrid::MyGrid()
+{
+}
 void MyGrid::DisplayGrid()
 {   
 	cout << "                      " << endl;
@@ -12,66 +17,48 @@ void MyGrid::DisplayGrid()
 	cout << "                      " << endl;
 }
 
-bool MyGrid::PlayPiece()
+bool MyGrid::CheckDraw(bool &gameover)
 {
-	int x;
-	cout << "Choose a number from 1 to 9 to mark your place." << endl;
-	cin >> x;
-	if (x == 7 && (Grid2D[0][0] != 'X' || Grid2D[0][0] != 'O'))
+	int n = 1;
+    int i = 0;		
+	int j = 0;
+    int counter = 0;	
+	for (i = 0; i < 3; i++)
 	{
-		Grid2D[0][0] = mPlayer;
+        for (j = 0; j < 3; j++)
+		{				
+			if (Grid2D[i][j] == '0' + n)
+			{
+			 counter++;
+			}
+			n++;				
+		}
 	}
-	else if (x == 8 && (Grid2D[0][1] != 'X' || Grid2D[0][1] != 'O'))
+	if (counter < 1)
 	{
-		Grid2D[0][1] = mPlayer;
+		cout << "It's a draw!\n\n";
+		gameover = true;
 	}
-	else if (x == 9 && (Grid2D[0][2] != 'X' || Grid2D[0][2] != '0'))
-	{
-		Grid2D[0][2] = mPlayer;
-	}
-	else if (x == 4 && (Grid2D[1][0] != 'X' || Grid2D[1][0] != 'O'))
-	{
-		Grid2D[1][0] = mPlayer;
-	}
-	else if (x == 5 && (Grid2D[1][1] !='X' || Grid2D[1][1] != 'O'))
-	{
-		Grid2D[1][1] = mPlayer;
-	}
-	else if (x == 6 && (Grid2D[1][2] != 'X' || Grid2D[1][2] != 'O'))
-	{
-		Grid2D[1][2] = mPlayer;
-	}
-	else if (x == 1 && (Grid2D[2][0] != 'X' || Grid2D[2][0] != 'O'))
-	{
-		Grid2D[2][0] = mPlayer;
-	}
-	else if (x == 2 && (Grid2D[2][1] != 'X'|| Grid2D[2][1] != 'O'))
-	{
-		Grid2D[2][1] = mPlayer;
-	}
-	else if (x == 3 && (Grid2D[2][2] != 'X' || Grid2D[2][2] != 'O'))
-	{
-		Grid2D[2][2] = mPlayer;
-	}
-	else
-	{
-		cout << "Cant choose this position." << endl;
-	}
-	return false;
+		return gameover;
 }
 
-void MyGrid::ClearGrid()
+void MyGrid::PlayerMove(char &num, char &player)
 {
-
-}
-
-void MyGrid::CheckSpace(int x, int o)
-{
-	int rule;
-	if ()
-	{
-		
+	int i = 0;
+		int j = 0;
+		bool WrongMove = true; //If true, the player has made a wrong move
+		for (i = 0; i < 3; i++)
+		{
+				for (j = 0; j < 3; j++)
+				{ //Mark square with X or O if WrongMove is not true
+						if (Grid2D[i][j] == num)
+						{
+								Grid2D[i][j] = player; //Assigns the space with the X or O, depending on the table.
+								WrongMove = false;
+						}
+				}
 	}
+	if (WrongMove == true) { cout << "Wrong move!\n"; }
 }
 
 void MyGrid::DrawGrid()

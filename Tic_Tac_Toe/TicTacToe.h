@@ -19,6 +19,8 @@ private:
 	//Protection Level: Private
 
 public:
+	MyGrid();
+
 	void DisplayGrid();
 	//Prototype: void DisplayGrid();
 	//Description: Shows the area in which the grid will appear
@@ -27,15 +29,7 @@ public:
 	//Postcondition: Allows user input from the PlayPiece() function personal slot
 	//Protection Level:	Public
 
-	bool PlayPiece();
-	//Prototype: bool PlayPiece();
-	//Description: Functions as a rotator for two players in the game.
-	//Arguments: N/A
-	//Precondition: Starts of with player one with the "X" piece and second with "O"
-	//Postcondition: Covers the numbers with a "X" or a "O" to show placement.
-	//Protection Level:Public
-
-	void ClearGrid();
+	bool CheckDraw(bool &gameover);
 	//Prototype: void ClearGrid();
 	//Description: 
 	//Arguments: N/A
@@ -43,7 +37,7 @@ public:
 	//PostCondition:
 	//Protection Level: Public
 
-	void CheckSpace(int x, int o);
+	void PlayerMove(char &num, char &player);
 	//Prototype: void Playerinfo(char player1, char player2);
 	//Description: Displays info about the current player turn.
 	//Arguments: N/A
